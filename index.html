@@ -238,7 +238,7 @@ function set(l){
 }
 document.getElementById('bEn').onclick=function(){set('en')};
 document.getElementById('bHe').onclick=function(){set('he')};
-var start="en"; try{start=(location.hash==="#he"?"he":location.hash==="#en"?"en":null)||localStorage.getItem('mwp-lang-j')||((navigator.language||"").indexOf("he")===0?"he":"en")}catch(e){}
+var start=(location.hash==="#he")?"he":"en";
 set(start);
 
 var toast=document.getElementById('toast'),tt;
